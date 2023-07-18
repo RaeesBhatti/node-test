@@ -4,8 +4,10 @@ const host = "127.0.0.1";
 const port = process.env.PORT || '3001';
 
 const requestListener = function (req, res) {
-    res.writeHead(200);
-    res.end("My first server!");
+    res.writeHead(200, {
+        'Content-Type': 'text/plain'
+    });
+    res.end(req.headers['host']);
 };
 
-export default requestListener;
+http.createServer(requestListener).listen(port, host);

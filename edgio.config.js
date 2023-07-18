@@ -52,7 +52,7 @@ module.exports = {
 
   customConnector: {
     buildFolder: "app",
-    entryFile: "index.js",
+    entryFile: "app/index.js",
     envPort: "PORT",
     buildCommand: "",
     devCommand: "",
